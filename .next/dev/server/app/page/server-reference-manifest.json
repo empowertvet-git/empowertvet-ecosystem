@@ -1,0 +1,20 @@
+{
+  "node": {
+    "00a0188eb23f60b1fab7d259aa4a08163eef136ecc": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/stats.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getLandingStats",
+          "filename": "lib/actions/stats.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "exportedName": "getLandingStats",
+      "filename": "lib/actions/stats.ts"
+    }
+  },
+  "edge": {}
+}

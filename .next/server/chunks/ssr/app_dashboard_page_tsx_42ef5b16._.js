@@ -1,0 +1,3 @@
+module.exports=[20731,a=>{"use strict";var b=a.i(87924),c=a.i(72131),d=a.i(50944);function e(){let a=(0,d.useRouter)();return(0,c.useEffect)(()=>{a.push("/portal")},[a]),(0,b.jsx)("div",{className:"flex min-h-screen items-center justify-center",children:(0,b.jsxs)("div",{className:"text-center",children:[(0,b.jsx)("div",{className:"mx-auto mb-4 size-12 animate-spin rounded-full border-4 border-primary border-t-transparent"}),(0,b.jsx)("p",{className:"text-muted-foreground",children:"Redirecting to Student Hub..."})]})})}a.s(["default",()=>e])}];
+
+//# sourceMappingURL=app_dashboard_page_tsx_42ef5b16._.js.map

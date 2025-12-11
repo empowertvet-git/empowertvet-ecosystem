@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <!-- Icon: Abstract Growth/Foundation Symbol -->
+  <path d="M40 20 L40 80 L80 80" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="80" cy="30" r="10" fill="#16A34A"/>
+  <path d="M55 65 L80 30" stroke="#16A34A" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Text: EmpowerTVET -->
+  <text x="100" y="55" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#2563EB">EmpowerTVET</text>
+  
+  <!-- Text: Foundation -->
+  <text x="100" y="85" font-family="Arial, sans-serif" font-weight="normal" font-size="24" fill="#16A34A" letter-spacing="2">FOUNDATION</text>
+</svg>

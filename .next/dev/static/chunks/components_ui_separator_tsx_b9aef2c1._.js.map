@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Lenovo/Documents/My%20Future/Website/EmpowerTVET%20Ecosystem/empowertvet-ecosystem/components/ui/separator.tsx"],"sourcesContent":["'use client'\n\nimport * as React from 'react'\nimport * as SeparatorPrimitive from '@radix-ui/react-separator'\n\nimport { cn } from '@/lib/utils'\n\nfunction Separator({\n  className,\n  orientation = 'horizontal',\n  decorative = true,\n  ...props\n}: React.ComponentProps<typeof SeparatorPrimitive.Root>) {\n  return (\n    <SeparatorPrimitive.Root\n      data-slot=\"separator\"\n      decorative={decorative}\n      orientation={orientation}\n      className={cn(\n        'bg-border shrink-0',\n        orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px',\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Separator }\n"],"names":[],"mappings":";;;;;AAGA;AAEA;AALA;;;;AAOA,SAAS,UAAU,EACjB,SAAS,EACT,cAAc,YAAY,EAC1B,aAAa,IAAI,EACjB,GAAG,OACkD;IACrD,qBACE,6LAAC,gLAAuB;QACtB,aAAU;QACV,YAAY;QACZ,aAAa;QACb,WAAW,IAAA,qHAAE,EACX,sBACA,gBAAgB,eAAe,gBAAgB,eAC/C;QAED,GAAG,KAAK;;;;;;AAGf;KAnBS"}}]
+}
