@@ -10,6 +10,7 @@ import { db } from '@/lib/db'
 import { getLandingStats } from '@/lib/actions/stats'
 
 import { FoundationNavbar } from '@/components/layout/FoundationNavbar'
+import { PartnersSection } from '@/components/home/PartnersSection'
 
 export default async function FoundationPage() {
   const stats = await getLandingStats()
@@ -113,6 +114,9 @@ export default async function FoundationPage() {
           </div>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <PartnersSection />
 
       {/* Mission Section */}
       <section id="mission" className="py-16 lg:py-24">

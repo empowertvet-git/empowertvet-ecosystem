@@ -73,26 +73,28 @@ export function Navbar() {
                                     Navigation menu
                                 </SheetDescription>
                             </SheetHeader>
-                            <nav className="flex flex-col gap-4 mt-6">
-                                {navLinks.map((link) => (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
-                                        className="text-lg font-medium transition-colors hover:text-primary"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                ))}
-                                <div className="flex flex-col gap-3 mt-4">
-                                    <Button variant="ghost" asChild className="justify-start px-0">
+                            <div className="flex flex-col gap-6 mt-6">
+                                <nav className="flex flex-col gap-1">
+                                    {navLinks.map((link) => (
+                                        <Link
+                                            key={link.href}
+                                            href={link.href}
+                                            className="flex items-center py-2 text-lg font-medium transition-colors hover:text-primary border-b border-muted/50 last:border-0"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ))}
+                                </nav>
+                                <div className="flex flex-col gap-3 mt-auto">
+                                    <Button variant="ghost" asChild className="justify-start px-4 h-11 text-base border">
                                         <Link href="/login">Login</Link>
                                     </Button>
-                                    <Button asChild className="bg-primary hover:bg-primary/90 w-full">
+                                    <Button asChild className="bg-primary hover:bg-primary/90 w-full h-11 text-base">
                                         <Link href="/signup">Get Started</Link>
                                     </Button>
                                 </div>
-                            </nav>
+                            </div>
                         </SheetContent>
                     </Sheet>
                 </div>
