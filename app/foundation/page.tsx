@@ -9,6 +9,8 @@ import { db } from '@/lib/db'
 
 import { getLandingStats } from '@/lib/actions/stats'
 
+import { FoundationNavbar } from '@/components/layout/FoundationNavbar'
+
 export default async function FoundationPage() {
   const stats = await getLandingStats()
 
@@ -61,42 +63,7 @@ export default async function FoundationPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/foundation-logo.png"
-              alt="EmpowerTVET Foundation"
-              width={320}
-              height={96}
-              className="h-24 w-auto"
-              priority
-            />
-          </Link>
-          <nav className="hidden items-center gap-6 md:flex">
-            <Link href="#mission" className="text-sm font-medium transition-colors hover:text-primary">
-              Our Mission
-            </Link>
-            <Link href="#programs" className="text-sm font-medium transition-colors hover:text-primary">
-              Programs
-            </Link>
-            <Link href="#impact" className="text-sm font-medium transition-colors hover:text-primary">
-              Impact
-            </Link>
-            <Link href="#donate" className="text-sm font-medium transition-colors hover:text-primary">
-              Donate
-            </Link>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Button variant="ghost" asChild>
-              <Link href="/">Home</Link>
-            </Button>
-            <Button asChild>
-              <Link href="#donate">Donate Now</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <FoundationNavbar />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary to-accent py-20 text-primary-foreground lg:py-28">

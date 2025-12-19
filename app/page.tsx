@@ -9,56 +9,15 @@ import { ProgramsSection } from '@/components/home/ProgramsSection'
 // import { SuccessStoriesSection } from '@/components/home/SuccessStoriesSection'
 import { ConsultationServices } from '@/components/home/ConsultationServices'
 import { UniqueModelStats } from '@/components/home/UniqueModelStats'
+import { PartnersSection } from '@/components/home/PartnersSection'
+
+import { Navbar } from '@/components/layout/Navbar'
 
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt="EmpowerTVET"
-              width={400}
-              height={120}
-              className="h-24 w-auto"
-              priority
-            />
-          </Link>
-          <nav className="hidden items-center gap-6 md:flex">
-            <Link href="#programs" className="text-sm font-medium transition-colors hover:text-primary">
-              Programs
-            </Link>
-            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
-              About
-            </Link>
-            <Link href="#impact" className="text-sm font-medium transition-colors hover:text-primary">
-              Impact
-            </Link>
-            <Link href="/foundation" className="text-sm font-medium transition-colors hover:text-primary">
-              Foundation
-            </Link>
-            <Link href="/partners" className="text-sm font-medium transition-colors hover:text-primary">
-              Partners
-            </Link>
-            <Link href="/blog" className="text-sm font-medium transition-colors hover:text-primary">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Button variant="ghost" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button asChild className="bg-primary hover:bg-primary/90">
-              <Link href="/signup">Get Started</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       <HeroSection />
       <StatsSection />
@@ -103,6 +62,7 @@ export default function HomePage() {
       <ProgramsSection />
       {/* <SuccessStoriesSection /> */}
       <ConsultationServices />
+      <PartnersSection />
 
       {/* CTA Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary to-[#0d9488] py-20 text-primary-foreground">
