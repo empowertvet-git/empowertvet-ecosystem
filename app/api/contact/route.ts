@@ -8,16 +8,20 @@ export async function POST(req: Request) {
 
         console.log('Received contact form submission:', { name, email, subject })
 
-        // Create a transporter using SMTP
+        // Create a transporter using environment variables
         const transporter = nodemailer.createTransport({
-            host: "mail.gandi.net",
-            port: 465,
-            secure: true, // true for 465, false for other ports
+            host: process.env.SMTP_HOST || "mail.gandi.net",
+            port: parseInt(process.env.SMTP_PORT || "465"),
+            secure: process.env.SMTP_SECURE !== "false", // Default to true
             auth: {
-                user: "info@empowertvet.com",
-                pass: "EmpowerTVET@11117",
+                user: process.env.SMTP_USER || "info@empowertvet.com",
+                pass: process.env.SMTP_PASS,
             },
         })
+
+        if (!process.env.SMTP_PASS) {
+            console.error('SMTP_PASS is not set in environment variables')
+        }
 
         // Send the email
         await transporter.sendMail({
