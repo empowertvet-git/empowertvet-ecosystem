@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Menu } from "lucide-react"
+import { Menu, Home, BookOpen, Info, BarChart, Heart, Users, Mail, BookText, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader, SheetDescription } from "@/components/ui/sheet"
 import { useState } from "react"
@@ -11,13 +11,14 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
     const navLinks = [
-        { href: "/#programs", label: "Programs" },
-        { href: "/#about", label: "About" },
-        { href: "/#impact", label: "Impact" },
-        { href: "/foundation", label: "Foundation" },
-        { href: "/partners", label: "Partners" },
-        { href: "/blog", label: "Blog" },
-        { href: "/contact", label: "Contact" },
+        { href: "/", label: "Home", icon: Home },
+        { href: "/#programs", label: "Programs", icon: BookOpen },
+        { href: "/#about", label: "About", icon: Info },
+        { href: "/#impact", label: "Impact", icon: BarChart },
+        { href: "/foundation", label: "Foundation", icon: Heart },
+        { href: "/partners", label: "Partners", icon: Users },
+        { href: "/blog", label: "Blog", icon: BookText },
+        { href: "/contact", label: "Contact", icon: Phone },
     ]
 
     return (
@@ -75,16 +76,20 @@ export function Navbar() {
                             </SheetHeader>
                             <div className="flex flex-col gap-6 mt-6">
                                 <nav className="flex flex-col gap-1">
-                                    {navLinks.map((link) => (
-                                        <Link
-                                            key={link.href}
-                                            href={link.href}
-                                            className="flex items-center py-2 text-lg font-medium transition-colors hover:text-primary border-b border-muted/50 last:border-0"
-                                            onClick={() => setIsOpen(false)}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    ))}
+                                    {navLinks.map((link) => {
+                                        const Icon = link.icon
+                                        return (
+                                            <Link
+                                                key={link.href}
+                                                href={link.href}
+                                                className="flex items-center gap-4 py-4 text-lg font-medium transition-colors hover:text-primary border-b border-muted/50 last:border-0"
+                                                onClick={() => setIsOpen(false)}
+                                            >
+                                                <Icon className="h-5 w-5 text-muted-foreground" />
+                                                {link.label}
+                                            </Link>
+                                        )
+                                    })}
                                 </nav>
                                 <div className="flex flex-col gap-3 mt-auto">
                                     <Button variant="ghost" asChild className="justify-start px-4 h-11 text-base border">

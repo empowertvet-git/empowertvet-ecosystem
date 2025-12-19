@@ -31,32 +31,32 @@ export default function BlogPage() {
     },
     {
       id: 3,
-      title: 'New ICT Hub Opens in Banjul: Digital Skills for the Future',
-      excerpt: 'Our state-of-the-art ICT training facility is now open, equipped with modern computers and high-speed internet.',
-      category: 'Facilities',
-      author: 'Tech Team',
+      title: 'Introducing: Sustainable Construction & Solar Trades',
+      excerpt: 'We are thrilled to announce our upcoming program focused on sustainable building practices and solar integration. Enrollment opens soon for this comprehensive hands-on training.',
+      category: 'Program Launch',
+      author: 'Program Director',
       date: 'February 10, 2025',
       readTime: '3 min read',
-      image: '/african-students-learning-coding-computer-lab.jpg'
+      image: '/construction-technical-trades.jpg'
     },
     {
       id: 4,
-      title: 'Graduation Ceremony: 150 Students Receive Certifications',
-      excerpt: 'We celebrated the achievements of 150 graduates across six vocational programs, ready to launch their careers.',
-      category: 'Events',
-      author: 'Events Team',
+      title: 'Coming Soon: Smart Urban Farming & Hydroponics',
+      excerpt: 'Revolutionize agriculture in urban spaces. Our new Smart Farming course will teach hydroponics and vertical farming techniques to maximize yield in small areas.',
+      category: 'Program Launch',
+      author: 'Agri-Tech Team',
       date: 'February 8, 2025',
-      readTime: '6 min read',
-      image: '/african-youth-vocational-training-gambia.jpg'
+      readTime: '4 min read',
+      image: '/african-agriculture-food-processing.jpg'
     },
     {
       id: 5,
-      title: 'How Our Incubation Program Supports Graduate Businesses',
-      excerpt: 'Learn about our comprehensive business support system that helps graduates turn their skills into sustainable enterprises.',
-      category: 'Incubation',
-      author: 'Business Team',
+      title: 'New Feature: Expert Consultation Platform',
+      excerpt: 'Need advice on Agriculture, Climate Change, or Sustainable Finance? EmpowerTVET now connects you directly with industry experts for personalized consultation.',
+      category: 'New Feature',
+      author: 'Tech Team',
       date: 'February 5, 2025',
-      readTime: '7 min read',
+      readTime: '2 min read',
       image: '/young-african-tech-entrepreneur-office.jpg'
     },
     {
@@ -67,7 +67,7 @@ export default function BlogPage() {
       author: 'Diversity Team',
       date: 'February 1, 2025',
       readTime: '5 min read',
-      image: '/young-african-construction-workers-building-site.jpg'
+      image: '/african-construction-workers.jpg'
     },
     {
       id: 7,
@@ -85,6 +85,7 @@ export default function BlogPage() {
     'All Posts',
     'Success Stories',
     'Program Launch',
+    'New Feature',
     'Events',
     'Partnerships',
     'Impact',

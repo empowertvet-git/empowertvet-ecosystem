@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Menu } from "lucide-react"
+import { Menu, Target, BookOpen, BarChart, Heart, Home } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader, SheetDescription } from "@/components/ui/sheet"
 import { useState } from "react"
@@ -11,10 +11,10 @@ export function FoundationNavbar() {
     const [isOpen, setIsOpen] = useState(false)
 
     const navLinks = [
-        { href: "#mission", label: "Our Mission" },
-        { href: "#programs", label: "Programs" },
-        { href: "#impact", label: "Impact" },
-        { href: "#donate", label: "Donate" },
+        { href: "#mission", label: "Our Mission", icon: Target },
+        { href: "#programs", label: "Programs", icon: BookOpen },
+        { href: "#impact", label: "Impact", icon: BarChart },
+        { href: "#donate", label: "Donate", icon: Heart },
     ]
 
     return (
@@ -72,23 +72,33 @@ export function FoundationNavbar() {
                             </SheetHeader>
                             <div className="flex flex-col gap-6 mt-6">
                                 <nav className="flex flex-col gap-1">
-                                    {navLinks.map((link) => (
-                                        <Link
-                                            key={link.href}
-                                            href={link.href}
-                                            className="flex items-center py-2 text-lg font-medium transition-colors hover:text-primary border-b border-muted/50 last:border-0"
-                                            onClick={() => setIsOpen(false)}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    ))}
+                                    {navLinks.map((link) => {
+                                        const Icon = link.icon
+                                        return (
+                                            <Link
+                                                key={link.href}
+                                                href={link.href}
+                                                className="flex items-center gap-4 py-4 text-lg font-medium transition-colors hover:text-primary border-b border-muted/50 last:border-0"
+                                                onClick={() => setIsOpen(false)}
+                                            >
+                                                <Icon className="h-5 w-5 text-muted-foreground" />
+                                                {link.label}
+                                            </Link>
+                                        )
+                                    })}
                                 </nav>
                                 <div className="flex flex-col gap-3 mt-auto">
-                                    <Button variant="ghost" asChild className="justify-start px-4 h-11 text-base border">
-                                        <Link href="/">Home</Link>
+                                    <Button variant="ghost" asChild className="justify-start px-4 h-11 text-base border gap-2">
+                                        <Link href="/" className="flex items-center gap-2">
+                                            <Home className="h-4 w-4" />
+                                            Home
+                                        </Link>
                                     </Button>
-                                    <Button asChild className="w-full h-11 text-base">
-                                        <Link href="#donate">Donate Now</Link>
+                                    <Button asChild className="w-full h-11 text-base gap-2">
+                                        <Link href="#donate" className="flex items-center gap-2">
+                                            <Heart className="h-4 w-4" />
+                                            Donate Now
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>

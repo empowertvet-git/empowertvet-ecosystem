@@ -101,7 +101,7 @@ async function main() {
         data: {
             title: 'ICT & Digital Skills',
             description: 'Master computer literacy and digital tools.',
-            image: '/ict-training.jpg',
+            image: '/african-students-learning-coding-computer-lab.jpg',
             price: 3000,
             category: 'Technology',
             published: true
@@ -113,7 +113,7 @@ async function main() {
         data: {
             title: 'Cashew & Fruit Processing Masterclass',
             description: 'Learn modern preservation techniques for mangos, cashew, and other local produce. Focus on value addition and export quality standards.',
-            image: '/agri-processing.jpg',
+            image: '/african-agriculture-food-processing-facility.jpg',
             price: 4500,
             category: 'Agriculture',
             level: 'Intermediate',
@@ -132,7 +132,7 @@ async function main() {
         data: {
             title: 'Smart Urban Farming & Hydroponics',
             description: 'Innovative farming techniques for urban spaces. Learn hydroponics, vertical farming, and water conservation.',
-            image: '/smart-farming.jpg',
+            image: '/african-agriculture-food-processing.jpg',
             price: 5500,
             category: 'Agriculture',
             level: 'Advanced',
@@ -145,7 +145,7 @@ async function main() {
         data: {
             title: 'Sustainable Construction & Solar Trades',
             description: 'Comprehensive training in compressed earth blocks, welding, and integrating solar systems into buildings.',
-            image: '/sustainable-construction.jpg',
+            image: '/construction-technical-trades.jpg',
             price: 6000,
             category: 'Construction',
             level: 'Beginner to Intermediate',
